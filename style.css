@@ -558,14 +558,31 @@ img {
 /* =========================================
    Testimonials Section
    ========================================= */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.testimonials-slider-container {
+    position: relative;
+    padding: 0 1rem;
+}
+
+.testimonials-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     gap: 2rem;
-    margin-top: 3rem;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.testimonials-slider::-webkit-scrollbar {
+    display: none;
 }
 
 .testimonial-card {
+    min-width: 320px;
+    max-width: 400px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
     background: var(--clr-white);
     padding: 2.5rem 2rem;
     border-radius: var(--border-radius);
@@ -573,6 +590,33 @@ img {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.slider-btn {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.slider-btn:hover {
+    background: var(--clr-primary-light);
+    transform: scale(1.1);
 }
 
 .testimonial-card:hover {

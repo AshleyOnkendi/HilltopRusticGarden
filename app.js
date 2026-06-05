@@ -101,4 +101,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         });
     }
+
+    // 6. Testimonial Slider Auto-Rotate
+    const slider = document.querySelector('.testimonials-slider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (slider && prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: 340, behavior: 'smooth' });
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -340, behavior: 'smooth' });
+        });
+        
+        // Auto scroll every 4 seconds
+        setInterval(() => {
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                slider.scrollBy({ left: 340, behavior: 'smooth' });
+            }
+        }, 4000);
+    }
 });
