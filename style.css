@@ -195,7 +195,7 @@ img {
    ========================================= */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 36px;
     left: 0;
     width: 100%;
     z-index: 1000;
@@ -929,11 +929,14 @@ img {
     background: var(--clr-accent);
     color: var(--clr-white);
     text-align: center;
-    padding: 0.8rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
     font-weight: 500;
     z-index: 1001;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .announcement-banner p {
