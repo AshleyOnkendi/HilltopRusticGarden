@@ -556,6 +556,51 @@ img {
 }
 
 /* =========================================
+   Testimonials Section
+   ========================================= */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: var(--clr-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.stars {
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: var(--clr-text-dark);
+    flex-grow: 1;
+    line-height: 1.7;
+}
+
+.client-name {
+    color: var(--clr-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* =========================================
    Contact Form
    ========================================= */
 .contact-info {
