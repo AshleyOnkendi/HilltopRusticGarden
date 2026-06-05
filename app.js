@@ -118,18 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ==========================================
-// Preloader Logic
-// ==========================================
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.classList.add('preloader-hidden');
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500);
-    }
-});
 
 // ==========================================
 // Back to Top Button Logic
