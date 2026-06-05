@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="assets/hero-sunset.png">
+    
     <!-- SEO Metadata -->
     <meta name="keywords" content="Limuru restaurant, best restaurant in Limuru, koroga experience, nyama choma, food delivery Limuru, hilltop getaway, rustic garden">
     <meta property="og:title" content="Hilltop Rustic Garden | Limuru's Hidden Gem">
@@ -58,7 +61,7 @@
     <!-- Hero Section -->
     <header class="hero" id="home">
         <div class="hero-bg">
-            <img src="assets/hero-sunset.png" class="slideshow-img" alt="Sunset View">
+            <img src="assets/hero-sunset.png" class="slideshow-img" alt="Sunset View" fetchpriority="high">
             <img src="assets/hero-evening.png" class="slideshow-img" alt="Evening Dining">
             <img src="assets/mixed_platter.png" class="slideshow-img" alt="Family Platter">
             <img src="assets/nyama_plantain.png" class="slideshow-img" alt="Nyama Choma">
